@@ -459,6 +459,6 @@ if  __name__ == "__main__":
     from tool.utils import *
 
     boxes = do_detect(model, sized, 0.5, n_classes,0.4, use_cuda)
-
+    print(boxes)
     class_names = load_class_names(namesfile)
     plot_boxes(img, boxes, 'predictions.jpg', class_names)
