@@ -1,0 +1,5 @@
+import os
+test_images = [f for f in os.listdir('test') if f.endswith('.jpg')]
+for i in test_images:
+    img_path = "test/"+i
+    !python models.py {num_classes} checkpoints/Yolov4_epoch34.pth {img_path} test/_classes.txt
